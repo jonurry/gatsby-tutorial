@@ -42,6 +42,13 @@ export default ({ data }) => {
                 </span>
               </h3>
               <p>{node.excerpt}</p>
+              <p
+                css={css`
+                  text-align: right;
+                `}
+              >
+                {node.timeToRead} min{node.timeToRead === 1 ? '' : 's'} read
+              </p>
             </Link>
           </div>
         ))}
@@ -65,6 +72,7 @@ export const query = graphql`
             slug
           }
           excerpt
+          timeToRead
         }
       }
     }
