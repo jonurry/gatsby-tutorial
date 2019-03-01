@@ -32,10 +32,7 @@ module.exports = {
         icon: 'src/images/icon.png' // This path is relative to the root of the site.
       }
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {}
-    },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    `gatsby-plugin-react-helmet`
   ]
 };
